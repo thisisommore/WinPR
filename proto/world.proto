@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package world;
+
+service World {
+  rpc CreateWorld(CreateWorldRequest) returns (CreateWorldReply) {}
+}
+
+message CreateWorldRequest { string member = 1; }
+
+message CreateWorldReply { string welcomeMessage = 1; }
